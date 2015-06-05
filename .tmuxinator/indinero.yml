@@ -1,0 +1,41 @@
+#d ~/.tmuxinator/indinero.yml
+
+name: indinero
+root: ~/dev/indinero
+pre_tab: rvm ruby-2.1.5@indinero
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+windows:
+  - home:
+      name: home
+      layout: 46d5,193x46,0,0{140x46,0,0,0,52x46,141,0[52x22,141,0,2,52x23,141,23,3]}
+      main-pane-width: 150
+      panes:
+        - vim
+        - bundle exec rails c
+        - 
+  - server:
+      name: server
+      layout: e0ce,193x45,0,0[193x22,0,0{96x22,0,0,1,96x22,97,0,4},193x23,0,23{96x23,0,23,5,96x23,97,23,6}]
+      panes: 
+        - bundle exec rails s
+        - cd ~/dev/vagrant_indinero && vagrant up && vagrant ssh
+        - redis-server
+        - ssh deploy@makati.indinerocorp.com
