@@ -49,7 +49,11 @@ plugins=(git)
 
 # User configuration
 
-export PATH="~/.rvm/gems/ruby-2.1.5@indinero/bin:~/.rvm/gems/ruby-2.1.5@global/bin:~/.rvm/rubies/ruby-2.1.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.rvm/bin:~/.rvm/bin:~/.rvm/bin"
+source ~/.rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# export PATH="~/.rvm/gems/ruby-2.1.5@indinero/bin:~/.rvm/gems/ruby-2.1.5@global/bin:~/.rvm/rubies/ruby-2.1.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.rvm/bin:~/.rvm/bin:~/.rvm/bin:/home/boggs/.rvm/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
