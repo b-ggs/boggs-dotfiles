@@ -1,6 +1,6 @@
 " ctrlp
 " ,f : open ctrlp
-map ,f :CtrlP<CR> 
+map ,f :CtrlP<CR>
 
 " file tabs
 " ,t : new tab
