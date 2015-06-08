@@ -10,6 +10,3 @@ cp ~/.zshrc .
 cp ~/.tmux.conf .
 rm -rf .tmuxinator # clear repo .tmuxinator folder
 cp -r ~/.tmuxinator .
-
-# misc mux
-cp ~/.tmux.monokai.conf .

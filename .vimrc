@@ -54,9 +54,25 @@ nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 
-" It's useful to show the buffer number in the status line.
+" Buffer number next to filename
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " NERDTree
 " Ctrl-N : NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
+
+" Startify stuff
+let g:startify_custom_header = [
+		\'   888                                           .d8888888b.           d8b               ',
+		\'   888                                          d88P"   "Y88b          Y8P               ',
+		\'   888                                          888  d8b  888                            ',
+		\'   88888b.   .d88b.   .d88b.   .d88b.  .d8888b  888  888  888 888  888 888 88888b.d88b.  ',
+		\'   888 "88b d88""88b d88P"88b d88P"88b 88K      888  888bd88P 888  888 888 888 "888 "88b ',
+		\'   888  888 888  888 888  888 888  888 "Y8888b. 888  Y8888P"  Y88  88P 888 888  888  888 ',
+		\'   888 d88P Y88..88P Y88b 888 Y88b 888      X88 Y88b.     .d8  Y8bd8P  888 888  888  888 ',
+		\'   88888P"   "Y88P"   "Y88888  "Y88888  88888P   "Y88888888P"   Y88P   888 888  888  888 ',
+		\'                          888      888                                                   ',
+		\'                     Y8b d88P Y8b d88P                                                   ',
+		\'                      "Y88P"   "Y88P"                                                    ',
+		\'',
+		\ ]
