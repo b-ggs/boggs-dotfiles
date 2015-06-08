@@ -7,6 +7,6 @@ cp -r .vim ~
 cp .zshrc ~
 
 # mux
-cp .tmux.conf .
+cp .tmux.conf ~
 rm -rf ~/.tmuxinator
 cp -r .tmuxinator ~
