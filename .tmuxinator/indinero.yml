@@ -29,13 +29,13 @@ windows:
       main-pane-width: 150
       panes:
         - vim
-        - bundle exec rails c
-        - 
+        - sleep 20 && bundle exec rails c
+        - gst 
   - server:
       name: server
       layout: e0ce,193x45,0,0[193x22,0,0{96x22,0,0,1,96x22,97,0,4},193x23,0,23{96x23,0,23,5,96x23,97,23,6}]
       panes: 
-        - bundle exec rails s
+        - sleep 20 && bundle exec rails s
         - cd ~/dev/vagrant_indinero && vagrant up && vagrant ssh
         - redis-server
-        - ssh deploy@makati.indinerocorp.com
+        - gst
