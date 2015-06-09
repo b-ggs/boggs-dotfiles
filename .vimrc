@@ -62,6 +62,9 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 map <C-n> :NERDTreeToggle<CR>
 
 " Startify stuff
+" Let ctrlp.vim replace startify buffer
+let g:ctrlp_reuse_window  = 'startify'
+" Set Startify header
 let g:startify_custom_header = [
 		\'   888                                           .d8888888b.           d8b               ',
 		\'   888                                          d88P"   "Y88b          Y8P               ',
