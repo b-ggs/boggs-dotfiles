@@ -1,3 +1,7 @@
+" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 " ctrlp
 " ,f : open ctrlp
 map ,f :CtrlP<CR>
