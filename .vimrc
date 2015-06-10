@@ -2,6 +2,9 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+" system clipboard
+set clipboard=unnamedplus
+
 " ctrlp
 " ,f : open ctrlp
 map ,f :CtrlP<CR>
@@ -27,12 +30,6 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Right> <NOP>
-noremap <Left> <NOP>
 
 " remap splits
 " ,v : split vertically
