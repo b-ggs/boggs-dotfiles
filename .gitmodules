@@ -28,6 +28,6 @@
 [submodule ".vim/bundle/YankRing.vim"]
 	path = .vim/bundle/YankRing.vim
 	url = git@github.com:vim-scripts/YankRing.vim.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+[submodule ".vim/bundle/lightline.vim"]
+	path = .vim/bundle/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git

@@ -65,6 +65,16 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " Ctrl-N : NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
 
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
 " Startify stuff
 " Let ctrlp.vim replace startify buffer
 let g:ctrlp_reuse_window  = 'startify'
