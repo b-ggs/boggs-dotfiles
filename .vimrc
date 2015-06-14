@@ -3,7 +3,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamedplus, unnamed
 
 " ctrlp
 " ,f : open ctrlp
@@ -25,10 +25,10 @@ map ,o :MRU<CR>#
 set number
 set numberwidth=3
 
-" tab == 4 spaces
+" tab == 2 spaces
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " remap splits
