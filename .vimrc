@@ -3,7 +3,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " system clipboard
-set clipboard=unnamedplus, unnamed
+set clipboard=unnamedplus,unnamed
 
 " ctrlp
 " ,f : open ctrlp
