@@ -1,6 +1,8 @@
 " Pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+syntax enable
+filetype plugin indent on
 
 " system clipboard
 set clipboard=unnamedplus,unnamed
