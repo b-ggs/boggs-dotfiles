@@ -4,6 +4,12 @@ execute pathogen#infect()
 syntax enable
 filetype plugin indent on
 
+" autoread files
+set autoread
+
+" indentation
+set breakindent
+
 " system clipboard
 set clipboard=unnamedplus,unnamed
 
