@@ -11,6 +11,9 @@ Something I threw together while interning at a Rails-based company.
 * tmux
  * [tmuxinator](https://github.com/tmuxinator/tmuxinator) (optional)
 * [powerline](https://github.com/powerline/powerline)
+* i3
+ * i3status
+ * py3status
 * gnome-terminal (optional, for gnome-terminal-colors)
 
 ## Installation

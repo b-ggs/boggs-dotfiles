@@ -1,8 +1,19 @@
 " Pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+
+" general settings
 syntax enable
 filetype plugin indent on
+set nocompatible
+set ruler
+
+" bell
+set noerrorbells
+set visualbell
+
+" show statusline even when no window split
+set laststatus=2
 
 " autoread files
 set autoread
@@ -12,6 +23,10 @@ set breakindent
 
 " system clipboard
 set clipboard=unnamedplus,unnamed
+
+" move via display line
+map j gj
+map k gk
 
 " ctrlp
 " ,f : open ctrlp
@@ -38,6 +53,11 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" case insensitive search
+set ignorecase
+" search becomes case sensitive if caps used
+set smartcase
 
 " remap splits
 " ,v : split vertically
