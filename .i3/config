@@ -13,7 +13,9 @@ set $mod Mod1
 # new_window none 
 hide_edge_borders vertical
 focus_follows_mouse no
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
+gaps inner 5
+gaps outer 5
 
 exec syndaemon -i 0.1 -d -t -k
 
@@ -22,7 +24,8 @@ exec syndaemon -i 0.1 -d -t -k
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:Sans Mono 8
-font pango: Meslo LG S DZ for Powerline 6
+# font pango: Meslo LG S DZ for Powerline 6
+font pango: Roboto Mono Regular 7
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -34,8 +37,7 @@ font pango: Meslo LG S DZ for Powerline 6
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec i3-sensible-terminal
 
 
 # kill focused window
@@ -160,6 +162,8 @@ bar {
     background #1D1F21
   }
   # position top
-  status_command py3status -c ~/.i3/.i3status.conf 
+  # status_command py3status -c ~/.i3/.i3status.conf 
+  status_command i3blocks
+  # i3bar_command conky -c ~/lemonbar/conky-bar.sh | lemonbar -f "xft:MesloLGSforPowerline"
 }
 

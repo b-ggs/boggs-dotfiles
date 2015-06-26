@@ -8,6 +8,20 @@ filetype plugin indent on
 set nocompatible
 set ruler
 
+" Unity.vim
+nnoremap ,f :Unite file_rec/async<CR>
+
+" EasyMotion.vim
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
 " bell
 set noerrorbells
 set visualbell
@@ -30,7 +44,7 @@ map k gk
 
 " ctrlp
 " ,f : open ctrlp
-map ,f :CtrlP<CR>
+" map ,f :CtrlP<CR>
 
 " file tabs
 " ,t : new tab
@@ -92,13 +106,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'colorscheme': 'jellybeans',
       \ }
+      " \ 'separator': { 'left': '', 'right': '' },
+      " \ 'subseparator': { 'left': '', 'right': '' }
+  
+set noshowmode
 
 " Startify stuff
 " Let ctrlp.vim replace startify buffer
