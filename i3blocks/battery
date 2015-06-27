@@ -36,7 +36,7 @@ $status = $1;
 $percent = $2;
 $full_text = "";
 
-if ($status eq 'Discharging' && $percent == 100) {
+if ($status eq 'Discharging' && $percent == 100 || $acpi == "") {
   $full_text .= 'chg ';
 } elsif ($status eq 'Discharging') {
 	$full_text .= 'bat ';

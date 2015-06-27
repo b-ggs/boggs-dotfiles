@@ -13,14 +13,14 @@ nnoremap ,f :Unite file_rec/async<CR>
 
 " EasyMotion.vim
 " Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+" map  / <Plug>(easymotion-sn)
+" omap / <Plug>(easymotion-tn)
 
 " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
 " Without these mappings, `n` & `N` works fine. (These mappings just provide
 " different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+" map  n <Plug>(easymotion-next)
+" map  N <Plug>(easymotion-prev)
 
 " bell
 set noerrorbells
@@ -61,6 +61,9 @@ map ,o :MRU<CR>#
 " line numbers
 set number
 set numberwidth=3
+
+" highlighting search
+set hlsearch
 
 " tab == 2 spaces
 filetype plugin indent on
