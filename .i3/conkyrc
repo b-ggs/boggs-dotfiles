@@ -11,59 +11,59 @@ override_utf8_locale yes
 TEXT
 ,[
 
-#Finds current volume. May need modified depending on your setup
-  {
-    "full_text": " ♪ ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1} ",
-    "color":"\#268BD2",
-    "separator": false
-  },
-
-#Shows current user
-  {
-    "full_text": " ☻ [${exec whoami}] ",
-    "color":"\#ff00f3",
-    "separator": false
-  },
-
-#Shows hostname (heart for lack of better symbol)
-  {
-    "full_text": " ♥ [${exec hostname}] ",
-    "color":"\#6F3BFF",
-    "separator": false
-  },
-
 #Shows uploadspeed
   {
-    "full_text": " ▲ [${upspeed}] ",
+    "full_text": " u ${upspeed} ",
     "color":"\#ff0000",
+    "separator_block_width": 0,
     "separator": false
   },
 
 #Shows downloadspeed
   {
-    "full_text": " ▼ [${downspeed}] ", 
+    "full_text": " d ${downspeed} ", 
     "color":"\#00fff2",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Finds current volume. May need modified depending on your setup
+  {
+    "full_text": " vol ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1} ",
+    "color":"\#268BD2",
+    "separator_block_width": 0,
     "separator": false
   },
 
 #Shows current memory usage with a bar
   {
-    "full_text": " || [$membar] ", 
+    "full_text": " ram [$mem/$memmax] ", 
     "color":"\#B58900",
+    "separator_block_width": 0,
     "separator": false
   },
 
 #Shows current CPU usage with a bar
   {
-    "full_text": " ■ [$cpubar] ", 
+    "full_text": " cpu [$cpu%] ", 
     "color":"\#00A9B5",
+    "separator_block_width": 0,
     "separator": false
   },
 
-#Shows upime
+#Shows uptime
   {
-    "full_text": " ↑ [${uptime}] ",
+    "full_text": " uptime [${uptime}] ",
     "color": "\#dc322f",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Shows uptime
+  {
+    "full_text": " bat [${battery_percent}%] ",
+    "color": "\#dc322f",
+    "separator_block_width": 0,
     "separator": false
   },
 
@@ -71,6 +71,7 @@ TEXT
   {
     "full_text": " [${time %a %d %b} ${time %H:%M:%S}] ",
     "color": "\#2fdc57",
+    "separator_block_width": 0,
     "separator": false
   }
 ]
@@ -81,3 +82,18 @@ TEXT
 
 #Bar showing available entropy. Install haveged if you want this to rocket up. Without, /proc/sys/kernel/random/entropy_avail reported on my sysem ~175. With, it reported ~3585
 #  {"full_text": " ~ [$entropy_bar] ", "color":"\#AFB500"},
+#Shows current user
+#  {
+#    "full_text": " ☻ [${exec whoami}] ",
+#   "color":"\#ff00f3",
+#   "separator_block_width": 0,
+#   "separator": false
+# },
+
+#Shows hostname (heart for lack of better symbol)
+#  {
+#    "full_text": " ♥ [${exec hostname}] ",
+#    "color":"\#6F3BFF",
+#    "separator_block_width": 0,
+#    "separator": false
+#  },
