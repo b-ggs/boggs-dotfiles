@@ -18,6 +18,8 @@ gaps inner 5
 gaps outer 5
 
 exec syndaemon -i 0.1 -d -t -k
+exec synclient VertScrollDelta=-67
+exec synclient HorizScrollDelta=-67
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -37,7 +39,8 @@ font pango: Roboto Mono Regular 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt -e zsh -c "tmux"
 
 
 # kill focused window
@@ -163,7 +166,8 @@ bar {
   }
   # position top
   # status_command py3status -c ~/.i3/.i3status.conf 
-  status_command i3blocks
+  # status_command i3blocks
   # i3bar_command conky -c ~/lemonbar/conky-bar.sh | lemonbar -f "xft:MesloLGSforPowerline"
+  status_command ~/.i3/conky
 }
 

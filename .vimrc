@@ -63,7 +63,7 @@ set number
 set numberwidth=3
 
 " highlighting search
-set hlsearch
+" set hlsearch
 
 " tab == 2 spaces
 filetype plugin indent on
