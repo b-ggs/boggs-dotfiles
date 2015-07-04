@@ -36,7 +36,7 @@ $status = $1;
 $percent = $2;
 $full_text = "";
 
-if ($status eq 'Discharging' && $percent == 100 || $acpi == "") {
+if ($status eq 'Discharging' && $percent == 100 ) {
   $full_text .= 'chg ';
 } elsif ($status eq 'Discharging') {
 	$full_text .= 'bat ';
@@ -44,7 +44,7 @@ if ($status eq 'Discharging' && $percent == 100 || $acpi == "") {
 	$full_text .= 'chg ';
 }
 
-$full_text .= "$percent%";
+$full_text .= "[$percent%";
 
 $short_text = $full_text;
 
@@ -53,19 +53,19 @@ if ($acpi =~ /(\d\d:\d\d):/) {
 }
 
 # print text
-print "$full_text\n";
-print "$short_text\n";
+print "$full_text]";
+#print "$short_text\n";
 
 # consider color and urgent flag only on discharge
-if ($status eq 'Discharging') {
+#if ($status eq 'Discharging') {
 
-	if ($percent < 20) {
-		print "#a54242\n";
-	} 
+	#if ($percent < 20) {
+		#print "#a54242\n";
+	#} 
 
-	if ($percent < 5) {
-		exit(33);
-	}
-}
+	#if ($percent < 5) {
+		#exit(33);
+	#}
+#}
 
 exit(0);

@@ -20,9 +20,9 @@ INTERFACE="${BLOCK_INSTANCE:-eth0}"
 state="$(cat /sys/class/net/$INTERFACE/operstate)"
 
 if [ "$state" != "up" ]; then
+	# echo "down"
 	echo "down"
-	echo "down"
-	echo "#a54242"
+	# echo "#a54242"
 	exit 0
 fi
 
@@ -36,4 +36,4 @@ echo "$ipaddr"
 # [ -n "$speed" ] && echo " ($speed Mbits/s)" || echo
 
 # short text
-echo "$ipaddr"
+# echo "$ipaddr"

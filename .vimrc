@@ -26,6 +26,9 @@ nnoremap ,f :Unite file_rec/async<CR>
 set noerrorbells
 set visualbell
 
+" Path relative to working directory
+set statusline+=%f
+
 " show statusline even when no window split
 set laststatus=2
 

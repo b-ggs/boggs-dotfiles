@@ -58,6 +58,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 source $ZSH/oh-my-zsh.sh
 
+d=~/.dircolors
+test -r $d && eval "$(dircolors $d)"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -84,3 +87,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ack="ack-grep -i"
+alias mount_data="udisks --mount /dev/sda5"
+alias unmount_data="udisks --unmount /dev/sda5"

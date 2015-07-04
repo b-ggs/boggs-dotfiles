@@ -3,97 +3,74 @@ out_to_console    yes
 out_to_x    no
 update_interval   1
 total_run_times   0
-short_units   yes
-pad_percents    3
+short_units   yes pad_percents    3
 
 override_utf8_locale yes
 
 TEXT
 ,[
 
-#Shows uploadspeed
+#Shows current CPU usage with a bar
   {
-    "full_text": " u ${upspeed} ",
-    "color":"\#ff0000",
-    "separator_block_width": 0,
-    "separator": false
-  },
-
-#Shows downloadspeed
-  {
-    "full_text": " d ${downspeed} ", 
-    "color":"\#00fff2",
-    "separator_block_width": 0,
-    "separator": false
-  },
-
-#Finds current volume. May need modified depending on your setup
-  {
-    "full_text": " vol ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1} ",
-    "color":"\#268BD2",
+    "full_text": " cpu [$cpu%]", 
+    "color":"\#cc6666",
     "separator_block_width": 0,
     "separator": false
   },
 
 #Shows current memory usage with a bar
   {
-    "full_text": " ram [$mem/$memmax] ", 
-    "color":"\#B58900",
+    "full_text": " ram [$mem/$memmax]", 
+    "color":"\#b5bd68",
     "separator_block_width": 0,
     "separator": false
   },
 
-#Shows current CPU usage with a bar
+#wlan0 interface
   {
-    "full_text": " cpu [$cpu%] ", 
-    "color":"\#00A9B5",
+    "full_text": " wlan0 [${exec ~/i3blocks/wlan}]",
+    "color":"\#f0c674",
     "separator_block_width": 0,
     "separator": false
   },
 
-#Shows uptime
+#eth0 interface
   {
-    "full_text": " uptime [${uptime}] ",
-    "color": "\#dc322f",
+    "full_text": " eth0 [${exec ~/i3blocks/network}]",
+    "color":"\#81a2be",
     "separator_block_width": 0,
     "separator": false
   },
 
-#Shows uptime
+#Finds current volume. May need modified depending on your setup
   {
-    "full_text": " bat [${battery_percent}%] ",
-    "color": "\#dc322f",
+    "full_text": " vol ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1}",
+    "color":"\#b294bb",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Shows current brightness 
+  {
+    "full_text": " brightness [${exec ~/i3blocks/brightness}]",
+    "color":"\#b294bb",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Battery
+  {
+    "full_text": " ${exec ~/i3blocks/battery}",
+    "color": "\#8abeb7",
     "separator_block_width": 0,
     "separator": false
   },
 
 #Shows time
   {
-    "full_text": " [${time %a %d %b} ${time %H:%M:%S}] ",
-    "color": "\#2fdc57",
+    "full_text": " [${time %a %d %b} ${time %H:%M:%S}]",
+    "color": "\#c5c8c6",
     "separator_block_width": 0,
     "separator": false
   }
 ]
-
-
-#Shows temperature of GPU. Only works with NVIDIA cards with the proprietary drivers installed. Could be replaced with a lm-sensors-provided temperature
-#  {"full_text": " ≈ [${exec nvidia-settings -q gpucoretemp -t}°C] ","color":"\#33CC99"},
-
-#Bar showing available entropy. Install haveged if you want this to rocket up. Without, /proc/sys/kernel/random/entropy_avail reported on my sysem ~175. With, it reported ~3585
-#  {"full_text": " ~ [$entropy_bar] ", "color":"\#AFB500"},
-#Shows current user
-#  {
-#    "full_text": " ☻ [${exec whoami}] ",
-#   "color":"\#ff00f3",
-#   "separator_block_width": 0,
-#   "separator": false
-# },
-
-#Shows hostname (heart for lack of better symbol)
-#  {
-#    "full_text": " ♥ [${exec hostname}] ",
-#    "color":"\#6F3BFF",
-#    "separator_block_width": 0,
-#    "separator": false
-#  },
