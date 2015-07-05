@@ -37,11 +37,11 @@ $percent = $2;
 $full_text = "";
 
 if ($status eq 'Discharging' && $percent == 100 ) {
-  $full_text .= 'chg ';
+  $full_text .= 'charging ';
 } elsif ($status eq 'Discharging') {
-	$full_text .= 'bat ';
+	$full_text .= 'battery ';
 } elsif ($status eq 'Charging') {
-	$full_text .= 'chg ';
+	$full_text .= 'charging ';
 }
 
 $full_text .= "[$percent%";

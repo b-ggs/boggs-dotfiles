@@ -28,7 +28,7 @@ TEXT
 
 #wlan0 interface
   {
-    "full_text": " wlan0 [${exec ~/i3blocks/wlan}]",
+    "full_text": " wi-fi [${exec ~/i3blocks/wlan}]",
     "color":"\#f0c674",
     "separator_block_width": 0,
     "separator": false
@@ -36,7 +36,7 @@ TEXT
 
 #eth0 interface
   {
-    "full_text": " eth0 [${exec ~/i3blocks/network}]",
+    "full_text": " ethernet [${exec ~/i3blocks/network}]",
     "color":"\#81a2be",
     "separator_block_width": 0,
     "separator": false
@@ -44,7 +44,7 @@ TEXT
 
 #Finds current volume. May need modified depending on your setup
   {
-    "full_text": " vol ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1}",
+    "full_text": " volume ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1}",
     "color":"\#b294bb",
     "separator_block_width": 0,
     "separator": false
