@@ -1,0 +1,1 @@
+amixer -D pulse get Master | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]' -m 1

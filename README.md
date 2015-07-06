@@ -1,7 +1,5 @@
 # Boggs' dotfiles
 
-Something I threw together while interning at a Rails-based company.
-
 ## Requirements
 
 * zsh
