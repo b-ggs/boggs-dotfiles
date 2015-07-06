@@ -137,3 +137,5 @@ let g:startify_custom_header = [
 		\'                      "Y88P"   "Y88P"                                                    ',
 		\'',
 		\ ]
+
+highlight Visual cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
