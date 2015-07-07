@@ -9,7 +9,7 @@ set nocompatible
 set ruler
 
 " Unity.vim
-nnoremap ,f :Unite file_rec/async<CR>
+" nnoremap ,f :Unite file_rec/async<CR>
 
 " EasyMotion.vim
 " Gif config
@@ -47,7 +47,7 @@ map k gk
 
 " ctrlp
 " ,f : open ctrlp
-" map ,f :CtrlP<CR>
+map ,f :CtrlP<CR>
 
 " file tabs
 " ,t : new tab

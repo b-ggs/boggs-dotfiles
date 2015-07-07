@@ -36,10 +36,10 @@ $status = $1;
 $percent = $2;
 $full_text = "";
 
-if ($status eq 'Discharging' && $percent == 100 ) {
-  $full_text .= 'charging ';
+if ($status eq 'Discharging' && $percent == 100 || $status eq 'Full' ) {
+  $full_text .= 'full ';
 } elsif ($status eq 'Discharging') {
-	$full_text .= 'battery ';
+	$full_text .= 'discharging ';
 } elsif ($status eq 'Charging') {
 	$full_text .= 'charging ';
 }
