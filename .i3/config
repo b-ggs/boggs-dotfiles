@@ -13,11 +13,11 @@ set $mod Mod1
 # new_window none 
 hide_edge_borders vertical
 focus_follows_mouse no
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 5
 smart_borders on
 smart_gaps on
-# gaps inner 5
-# gaps outer 5
+gaps inner 5
+gaps outer 5
 
 exec feh --bg-fill ~/assets/background.png
 exec syndaemon -i 1 -d -t -k
@@ -25,9 +25,9 @@ exec synclient VertScrollDelta=-67
 exec synclient HorizScrollDelta=-67
 
 # 0px Border Windows
-for_window [class="chrome"] border none, move container to workspace 2 web
-for_window [class="Chromium"] border none, move container to workspace 2 web
-for_window [class="Spotify"] border none, move container to workspace 10 spotify
+for_window [class="chrome"] move container to workspace 2 web
+for_window [class="Chromium"] move container to workspace 2 web
+for_window [class="Spotify"] move container to workspace 10 spotify
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -48,7 +48,8 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt -e zsh -c "tmux"
+# bindsym $mod+Return exec urxvt -e zsh -c "tmux"
+bindsym $mod+Return exec urxvt
 
 
 # kill focused window
@@ -62,10 +63,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -74,10 +75,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -86,10 +87,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+- split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+\ split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -112,7 +113,7 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1 terminal
 bindsym $mod+2 workspace 2 web
-bindsym $mod+3 workspace 3 misc
+bindsym $mod+3 workspace 3 dev
 bindsym $mod+4 workspace 4 misc
 bindsym $mod+5 workspace 5 misc
 bindsym $mod+6 workspace 6 misc
@@ -124,7 +125,7 @@ bindsym $mod+0 workspace 10 spotify
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1 terminal
 bindsym $mod+Shift+2 move container to workspace 2 web
-bindsym $mod+Shift+3 move container to workspace 3 misc
+bindsym $mod+Shift+3 move container to workspace 3 dev
 bindsym $mod+Shift+4 move container to workspace 4 misc
 bindsym $mod+Shift+5 move container to workspace 5 misc
 bindsym $mod+Shift+6 move container to workspace 6 misc
@@ -154,10 +155,10 @@ mode "resize" {
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym j resize shrink width 10 px or 10 ppt
-    bindsym k resize grow height 10 px or 10 ppt
-    bindsym l resize shrink height 10 px or 10 ppt
-    bindsym semicolon resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -172,6 +173,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "move" {
+    bindsym k move up 10px
+    bindsym h move left 10px
+    bindsym j move down 10px
+    bindsym l move right 10px
+
+    bindsym K move up 30px
+    bindsym H move left 30px
+    bindsym J move down 30px
+    bindsym L move right 30px
+
     bindsym Up move up 10px
     bindsym Left move left 10px
     bindsym Down move down 10px
@@ -185,7 +196,7 @@ bindsym $mod+m focus floating; mode "move"
 bindsym $mod+x move workspace to output right
 
 #name                   #top    #border #text
-client.focused          #747C84 #c5c8c6 #747C84 #F3F4F5
+client.focused          #747C84 #303030 #747C84 #F3F4F5
 client.unfocused        #747C84 #1d1f21 #F3F4F5 #747C84
 client.focused_inactive #747C84 #1d1f21 #F3F4F5 #747C84
 client.urgent           #747C84 #cc6666 #F3F4F5 #747C84

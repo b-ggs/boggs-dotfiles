@@ -62,4 +62,4 @@ URxvt.tabbedex.new-button: no
 URxvt.keysym.F11: perl:fullscreen:switch
 
 !#include "/home/boggs/boggs-dotfiles/.xcolors/railscasts-256.xcolors"
-#include "/home/indinero_intern_1/boggs-dotfiles/.xcolors/terminal.sexy.xcolors"
+#include "/home/boggs/boggs-dotfiles/.xcolors/terminal.sexy.xcolors"
