@@ -26,6 +26,7 @@ exec synclient HorizScrollDelta=-67
 
 # 0px Border Windows
 for_window [class="chrome"] border none, move container to workspace 2 web
+for_window [class="Chromium"] border none, move container to workspace 2 web
 for_window [class="Spotify"] border none, move container to workspace 10 spotify
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -181,6 +182,7 @@ mode "move" {
     bindsym Escape mode "default"
 }
 bindsym $mod+m focus floating; mode "move"
+bindsym $mod+x move workspace to output right
 
 #name                   #top    #border #text
 client.focused          #747C84 #c5c8c6 #747C84 #F3F4F5
@@ -205,4 +207,5 @@ bar {
   # i3bar_command conky -c ~/lemonbar/conky-bar.sh | lemonbar -f "xft:MesloLGSforPowerline"
   status_command ~/.i3/conky
 }
+
 

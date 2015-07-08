@@ -86,8 +86,22 @@ test -r $d && eval "$(dircolors $d)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Commands
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias i3conf="vim ~/.i3/config"
+alias tmuxconf="vim ~/.tmux.conf"
 alias ack="ack-grep -i"
 alias mountdata="udisks --mount /dev/sda5"
 alias unmountdata="udisks --unmount /dev/sda5"
 alias volume150="pactl set-sink-volume 1 150%"
 alias findgrep="find . | grep"
+
+# Directories
+alias home="cd ~"
+alias dotfiles="cd ~/boggs-dotfiles"
+alias dev="cd ~/dev"
+alias ind="cd ~/dev/indinero"
+
+# Displays
+alias externalindinero="xrandr --output HDMI1 --auto --left-of LVDS1"

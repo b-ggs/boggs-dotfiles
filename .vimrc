@@ -13,8 +13,11 @@ set ruler
 
 " EasyMotion.vim
 " Gif config
-" map  / <Plug>(easymotion-sn)
-" omap / <Plug>(easymotion-tn)
+" map  ' <Plug>(easymotion-sn)
+" omap ' <Plug>(easymotion-tn)
+
+" highlight kill
+nnoremap <silent> <esc> :noh<CR><esc>
 
 " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
 " Without these mappings, `n` & `N` works fine. (These mappings just provide
@@ -66,7 +69,8 @@ set number
 set numberwidth=3
 
 " highlighting search
-" set hlsearch
+set hlsearch
+set incsearch
 
 " tab == 2 spaces
 filetype plugin indent on
@@ -122,6 +126,20 @@ set noshowmode
 " Startify stuff
 " Let ctrlp.vim replace startify buffer
 let g:ctrlp_reuse_window  = 'startify'
+" Ctrlp ignore
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.DS_Store$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+"   \ 'file': '\.exe$\|\.so$\|\.dat$'
+"   \ }
+
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'"
+
 " Set Startify header
 let g:startify_custom_header = [
 		\'   888                                           .d8888888b.           d8b               ',
@@ -139,3 +157,4 @@ let g:startify_custom_header = [
 		\ ]
 
 highlight Visual cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
+highlight Search cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
