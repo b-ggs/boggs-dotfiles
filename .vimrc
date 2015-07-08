@@ -13,8 +13,8 @@ set ruler
 
 " EasyMotion.vim
 " Gif config
-" map  ' <Plug>(easymotion-sn)
-" omap ' <Plug>(easymotion-tn)
+map  m <Plug>(easymotion-sn)
+omap m <Plug>(easymotion-tn)
 
 " highlight kill
 nnoremap <silent> <esc> :noh<CR><esc>
