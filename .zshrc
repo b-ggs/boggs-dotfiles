@@ -26,6 +26,8 @@ alias setvolume="amixer -D pulse sset Master "
 alias setvolumemax="pactl set-sink-volume 1 "
 alias setvolume150="pactl set-sink-volume 1 150%"
 alias findgrep="find . | grep"
+alias findag="find . | ag"
+alias chrome="google-chrome"
 
 # Tmux
 alias tmuxl="tmux ls"

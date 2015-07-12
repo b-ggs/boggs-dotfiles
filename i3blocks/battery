@@ -36,7 +36,7 @@ $status = $1;
 $percent = $2;
 $full_text = "";
 
-if ($status eq 'Discharging' && $percent == 100 || $status eq 'Full' ) {
+if ($status eq 'Discharging' && $percent == 100 || $status eq 'Full' || !( $acpi =~ /(\d\d:\d\d):/) ) {
   $full_text .= 'full ';
 } elsif ($status eq 'Discharging') {
 	$full_text .= 'discharging ';

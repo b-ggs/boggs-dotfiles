@@ -2,6 +2,7 @@
 # firmware-ralink 
 git
 zsh
+tig
 vim
 vim-gui-common
 curl

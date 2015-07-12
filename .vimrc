@@ -126,12 +126,8 @@ set noshowmode
 " Startify stuff
 " Let ctrlp.vim replace startify buffer
 let g:ctrlp_reuse_window  = 'startify'
-" Ctrlp ignore
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.DS_Store$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-"   \ 'file': '\.exe$\|\.so$\|\.dat$'
-"   \ }
 
+" Ctrlp ignore
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore .svn
@@ -141,21 +137,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'"
 
 " Set Startify header
-" let g:startify_custom_header = [
-" 		\'   888                                           .d8888888b.           d8b               ',
-" 		\'   888                                          d88P"   "Y88b          Y8P               ',
-" 		\'   888                                          888  d8b  888                            ',
-" 		\'   88888b.   .d88b.   .d88b.   .d88b.  .d8888b  888  888  888 888  888 888 88888b.d88b.  ',
-" 		\'   888 "88b d88""88b d88P"88b d88P"88b 88K      888  888bd88P 888  888 888 888 "888 "88b ',
-" 		\'   888  888 888  888 888  888 888  888 "Y8888b. 888  Y8888P"  Y88  88P 888 888  888  888 ',
-" 		\'   888 d88P Y88..88P Y88b 888 Y88b 888      X88 Y88b.     .d8  Y8bd8P  888 888  888  888 ',
-" 		\'   88888P"   "Y88P"   "Y88888  "Y88888  88888P   "Y88888888P"   Y88P   888 888  888  888 ',
-" 		\'                          888      888                                                   ',
-" 		\'                     Y8b d88P Y8b d88P                                                   ',
-" 		\'                      "Y88P"   "Y88P"                                                    ',
-" 		\'',
-" 		\ ]
-
 let g:startify_custom_header = [
       \'   ┌─┐┌┐     ┌─┐┌─┐┌─┐ ',
       \'   │└┘├┴┐    │ ┬│ ┬└─┐ ',
