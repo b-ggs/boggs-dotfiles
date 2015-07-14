@@ -23,10 +23,9 @@ pre_tab: rvm ruby-2.1.5@indinero
 # startup_window: logs
 
 windows:
-  - home:
-      name: home
-      layout: 46d5,193x46,0,0{140x46,0,0,0,52x46,141,0[52x22,141,0,2,52x23,141,23,3]}
-      main-pane-width: 150
+  - dev:
+      name: dev
+      layout: 912b,383x95,0,0{300x95,0,0,0,82x95,301,0[82x47,301,0,2,82x47,301,48,3]}
       panes:
         - vim
         - sleep 20 && bundle exec rails c

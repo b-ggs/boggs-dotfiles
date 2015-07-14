@@ -12,8 +12,8 @@ gaps outer 5
 # for_window [class="chrome"] move container to workspace 2 web
 # for_window [class="Chromium"] move container to workspace 2 web
 for_window [class="Spotify"] move container to workspace 10 spotify
-assign [class="chrome"] 2 web
-assign [class="Chromium"] 2 web
+# assign [class="chrome"] 2 web
+# assign [class="Chromium"] 2 web
 # assign [class="Spotify"] 10 spotify
 
 font pango: Meslo LG S DZ for Powerline 6

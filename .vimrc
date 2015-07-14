@@ -13,8 +13,8 @@ set ruler
 
 " EasyMotion.vim
 " Gif config
-map  m <Plug>(easymotion-sn)
-omap m <Plug>(easymotion-tn)
+map  ; <Plug>(easymotion-sn)
+omap ; <Plug>(easymotion-tn)
 
 " highlight kill
 nnoremap <silent> <esc> :noh<CR><esc>
@@ -112,7 +112,7 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " NERDTree
 " Ctrl-N : NERDTreeToggle
-map <C-n> :NERDTreeToggle<CR>
+map t :NERDTreeToggle<CR>
 
 " Lightline
 let g:lightline = {

@@ -28,6 +28,8 @@ alias setvolume150="pactl set-sink-volume 1 150%"
 alias findgrep="find . | grep"
 alias findag="find . | ag"
 alias chrome="google-chrome"
+alias bgreset="feh --bg-fill ~/assets/background.png"
+alias bgset="feh --bg-fill"
 
 # Tmux
 alias tmuxl="tmux ls"
