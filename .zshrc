@@ -41,6 +41,7 @@ alias home="cd ~"
 alias dotfiles="cd ~/boggs-dotfiles"
 alias dev="cd ~/dev"
 alias ind="cd ~/dev/indinero"
+alias indvag="cd ~/dev/vagrant_indinero"
 alias datadrive="cd /media/Data"
 alias datadrivethunar="cd /media/boggs/Data"
 
@@ -48,3 +49,7 @@ alias datadrivethunar="cd /media/boggs/Data"
 alias x450ldv_externalspectrum="xrandr --output HDMI1 --auto --right-of eDP1"
 alias aspiree1_externalsamsung="xrandr --output HDMI1 --auto --left-of LVDS1"
 alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-as eDP1"
+
+# Synaptics
+alias synaptics_natscrollvert="synclient VertScrollDelta=-67"
+alias synaptics_natscrollhorz="synclient HorizScrollDelta=-67"
