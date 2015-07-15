@@ -49,7 +49,8 @@ alias datadrivethunar="cd /media/boggs/Data"
 alias x450ldv_disconnect="xrandr --output HDMI1 --off"
 alias x450ldv_externalspectrum="xrandr --output HDMI1 --auto --right-of eDP1"
 alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-as eDP1"
-alias indinero_external="~/boggs-dotfiles/xrandr/aspiree1_samsung_left.sh"
+alias indinero_external_aspiree1="~/boggs-dotfiles/xrandr/aspiree1_samsung_left.sh"
+alias indinero_external_x450ldv="~/boggs-dotfiles/xrandr/x450ldv_samsung_left.sh"
 
 # Synaptics
 alias synaptics_natscrollvert="synclient VertScrollDelta=-67"
