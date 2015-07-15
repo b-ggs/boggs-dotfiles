@@ -53,3 +53,6 @@ alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-
 # Synaptics
 alias synaptics_natscrollvert="synclient VertScrollDelta=-67"
 alias synaptics_natscrollhorz="synclient HorizScrollDelta=-67"
+
+# RVM
+alias rvm_indinero="rvm ruby-2.1.5@indinero"

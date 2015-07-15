@@ -61,3 +61,9 @@
 [submodule ".vim/bundle/tcomment_vim"]
 	path = .vim/bundle/tcomment_vim
 	url = git@github.com:tomtom/tcomment_vim.git
+[submodule "oh-my-fish"]
+	path = oh-my-fish
+	url = git@github.com:oh-my-fish/oh-my-fish.git
+[submodule ".oh-my-fish"]
+	path = .oh-my-fish
+	url = git@github.com:oh-my-fish/oh-my-fish.git

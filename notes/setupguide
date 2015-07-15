@@ -23,6 +23,7 @@ xbacklight
 rxvt-unicode-256color
 silversearcher-ag
 ranger
+compizconfig-settings-manager
 
 via deb
 google-chrome-stable
