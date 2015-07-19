@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#/usr/bin/perl
 
 my $full_text;
 my $mute_status;
@@ -7,8 +7,7 @@ open(MUTE, 'amixer -D pulse get Master | egrep \'Playback.*?\\[o\' | egrep -o \'
 $mute_status = <MUTE>;
 close(MUTE)
 
-if ($mute_status eq '[off]') {
+if ($mute_status eq '[off]') 
   $full_text .= "off";
-}
 
 print "$full_test";

@@ -5,9 +5,6 @@ dir=~/boggs-dotfiles                    # dotfiles directory
 olddir=~/boggs-dotfiles_old             # old dotfiles backup directory
 files=".zshrc .vimrc .vim .tmuxinator .tmux.conf .fonts .oh-my-zsh .tmux-powerlinerc .i3 styleguide .Xdefaults .i3blocks.conf i3blocks .xcolors .dircolors assets .oh-my-fish"        # list of files/folders to symlink in homedir
 
-# TODO: make this cleaner so that fish config doesn't need to have its own special symlink line, for now, this will do
-ln -s $dir/fish ~/.config/fish
-
 ##########
 
 # create dotfiles_old in homedir

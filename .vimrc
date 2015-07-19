@@ -2,7 +2,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-" general settings
+" General settings
 syntax enable
 filetype plugin indent on
 set nocompatible
@@ -25,7 +25,7 @@ nnoremap <silent> <esc> :noh<CR><esc>
 " map  n <Plug>(easymotion-next)
 " map  N <Plug>(easymotion-prev)
 
-" bell
+" Disable annoying bells.
 set noerrorbells
 set visualbell
 
@@ -127,7 +127,7 @@ set noshowmode
 " Let ctrlp.vim replace startify buffer
 let g:ctrlp_reuse_window  = 'startify'
 
-" Ctrlp ignore
+" Ctrlp optimization
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore .svn
