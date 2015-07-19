@@ -7,6 +7,7 @@ Plugins=(git)
 
 source ~/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export TERM="xterm-256color" #256 colors in gnome-terminal
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,7 +39,7 @@ alias tmuxk="tmux kill-session -t"
 
 # Directories
 alias home="cd ~"
-alias dotfiles="cd ~/boggs-dotfiles"
+alias dotfiles="cd ~/dotfiles"
 alias dev="cd ~/dev"
 alias ind="cd ~/dev/indinero"
 alias indvag="cd ~/dev/vagrant_indinero"
@@ -47,14 +48,13 @@ alias datadrivethunar="cd /media/boggs/Data"
 
 # Displays
 alias x450ldv_disconnect="xrandr --output HDMI1 --off"
-alias x450ldv_externalspectrum="xrandr --output HDMI1 --auto --right-of eDP1"
 alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-as eDP1"
-alias indinero_external_aspiree1="~/boggs-dotfiles/xrandr/aspiree1_samsung_left.sh"
-alias indinero_external_x450ldv="~/boggs-dotfiles/xrandr/x450ldv_samsung_left.sh"
+alias x450ldv_externalspectrum="~/dotfiles/xrandr/x450ldv_spectrum_right.sh"
+alias aspiree1_externalsamsung="~/dotfiles/xrandr/aspiree1_samsung_left.sh"
+alias x450ldv_externalsamsung="~/dotfiles/xrandr/x450ldv_samsung_left.sh"
 
 # Synaptics
-alias synaptics_natscrollvert="synclient VertScrollDelta=-67"
-alias synaptics_natscrollhorz="synclient HorizScrollDelta=-67"
+alias synaptics_natural="synclient VertScrollDelta=-67 && synclient HorizScrollDelta=-67"
 
 # RVM
-alias rvm_indinero="rvm ruby-2.1.5@indinero"
+alias rvm_ind="rvm ruby-2.1.5@indinero"

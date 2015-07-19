@@ -18,7 +18,7 @@
 
 Clone this repository into `~`
 ```bash
-git clone git@github.com:b-ggs/boggs-dotfiles.git
+git clone git@github.com:b-ggs/dotfiles.git
 ```
 
 Update the submodules inside
@@ -34,9 +34,9 @@ Run `bootstrap.sh`
 
 Update `gnome-terminal` configuration
 ```bash
-~/boggs-dotfiles/gnome-terminal-colors/terminal-sexy.sh
+~/dotfiles/gnome-terminal-colors/terminal-sexy.sh
 OR
-~/boggs-dotfiles/gnome-terminal-colors/gnome-terminal-colors-monokai/install.sh
+~/dotfiles/gnome-terminal-colors/gnome-terminal-colors-monokai/install.sh
 ```
     General
       Set profile default to terminal.sexy
