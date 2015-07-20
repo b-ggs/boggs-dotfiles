@@ -32,9 +32,11 @@ windows:
         - gst 
   - server:
       name: server
-      layout: e0ce,193x45,0,0[193x22,0,0{96x22,0,0,1,96x22,97,0,4},193x23,0,23{96x23,0,23,5,96x23,97,23,6}]
+      layout: bf47,383x95,0,0[383x47,0,0{191x47,0,0,1,191x47,192,0,4},383x48,0,48{191x48,0,48[191x24,0,48,5,191x23,0,73,18],191x48,192,48,6}]
       panes: 
         - sleep 20 && bundle exec rails s
         - cd ~/dev/vagrant_indinero && vagrant up && vagrant ssh
         - redis-server
+        - sleep 20 && bundle exec rake sunspot:solr:start
         - gst
+
