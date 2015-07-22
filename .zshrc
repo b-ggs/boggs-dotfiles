@@ -58,3 +58,6 @@ alias synaptics_natural="synclient VertScrollDelta=-67 && synclient HorizScrollD
 
 # RVM
 alias rvm_ind="rvm ruby-2.1.5@indinero"
+
+# Startup
+alias startup_ind="~/dotfiles/startup/indinero.sh"

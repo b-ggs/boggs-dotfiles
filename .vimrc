@@ -13,8 +13,8 @@ set ruler
 
 " EasyMotion.vim
 " Gif config
-map  ; <Plug>(easymotion-sn)
-omap ; <Plug>(easymotion-tn)
+" map  ; <Plug>(easymotion-sn)
+" omap ; <Plug>(easymotion-tn)
 
 " highlight kill
 nnoremap <silent> <esc> :noh<CR><esc>
@@ -40,7 +40,6 @@ set autoread
 
 " indentation
 set breakindent
-
 " system clipboard
 set clipboard=unnamedplus,unnamed
 
@@ -83,36 +82,21 @@ set ignorecase
 " search becomes case sensitive if caps used
 set smartcase
 
-" remap splits
-" ,v : split vertically
-" ,h : split horizontally
-noremap ,v <C-w>v
-noremap ,h <C-w>s
+" Remap pane navigadtion
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
-" \l       : list buffers
-" \b \f \g : go back/forward/last-used
-" \1 \2 \3 : go to buffer 1/2/3 etc
-nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
+nnoremap ,- <c-w>s
+nnoremap ,\ <c-w>v
 
 " Buffer number next to filename
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " NERDTree
 " Ctrl-N : NERDTreeToggle
-map t :NERDTreeToggle<CR>
+map ,t :NERDTreeToggle<CR>
 
 " Lightline
 let g:lightline = {
@@ -144,7 +128,10 @@ let g:startify_custom_header = [
   		\'',
   		\ ]
 
+let g:ag_working_path_mode="r"
+
 " Color override
+highlight LineNr ctermfg=1
 highlight Visual cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
 highlight Search cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
-highlight LineNr ctermfg=1
+highlight VertSplit ctermbg=236 ctermfg=236
