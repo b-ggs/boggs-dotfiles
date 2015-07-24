@@ -40,6 +40,7 @@ set autoread
 
 " indentation
 set breakindent
+
 " system clipboard
 set clipboard=unnamedplus,unnamed
 
@@ -51,16 +52,10 @@ map k gk
 " ,f : open ctrlp
 map ,f :CtrlP<CR>
 
-" file tabs
-" ,t : new tab
-" ,p : previous tab
-" ,n : next tab
-map ,t :tabe<CR>#
-map ,p :tabp<CR>#
-map ,n :tabn<CR>#
+" ag.vim
+nnoremap <leader>a :Ag! 
 
 " mru
-" ,o : open MRU
 map ,o :MRU<CR>#
 
 " line numbers
