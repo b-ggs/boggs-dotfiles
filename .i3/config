@@ -187,4 +187,7 @@ exec feh --bg-fill ~/assets/background.png
 exec syndaemon -i 1 -d -t -k
 exec synclient VertScrollDelta=-67
 exec synclient HorizScrollDelta=-67
+# Acer Aspire E1
+exec setxkbmap -option caps:none
+# ASUS X450LDV
 exec setxkbmap -options caps:none
