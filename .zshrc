@@ -45,6 +45,7 @@ alias ind="cd ~/dev/indinero"
 alias indvag="cd ~/dev/vagrant_indinero"
 alias datadrive="cd /media/Data"
 alias datadrivethunar="cd /media/boggs/Data"
+alias vimbundle="cd ~/.vim/bundle"
 
 # Displays
 alias x450ldv_disconnect="xrandr --output HDMI1 --off"
