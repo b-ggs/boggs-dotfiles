@@ -95,10 +95,17 @@ map ,t :NERDTreeToggle<CR>
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ }
-      " \ 'separator': { 'left': '', 'right': '' },
-      " \ 'subseparator': { 'left': '', 'right': '' }
+  \ 'colorscheme': 'jellybeans',
+  \ 'component_function': {
+  \   'filename': 'LightLineFilename'
+  \ }
+\ }
+  " \ 'separator': { 'left': '', 'right': '' },
+  " \ 'subseparator': { 'left': '', 'right': '' }
+
+function! LightLineFilename()
+  return expand('%')
+endfunction     
   
 set noshowmode
 
