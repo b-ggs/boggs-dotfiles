@@ -86,6 +86,9 @@ nnoremap <c-l> <c-w>l
 nnoremap ,- <c-w>s
 nnoremap ,\ <c-w>v
 
+" Remap mark
+nnoremap ; `
+
 " Buffer number next to filename
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
