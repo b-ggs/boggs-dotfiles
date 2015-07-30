@@ -19,11 +19,20 @@ set ruler
 " highlight kill
 nnoremap <silent> <esc> :noh<CR><esc>
 
+" Remap leader
+let mapleader = "\<Space>"
+
 " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
 " Without these mappings, `n` & `N` works fine. (These mappings just provide
 " different highlight method and have some other features )
 " map  n <Plug>(easymotion-next)
 " map  N <Plug>(easymotion-prev)
+
+" Easymotion 
+map <leader>l <Plug>(easymotion-lineforward)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+map <leader>h <Plug>(easymotion-linebackward)
 
 " Disable annoying bells.
 set noerrorbells
@@ -49,14 +58,13 @@ map j gj
 map k gk
 
 " ctrlp
-" ,f : open ctrlp
-map ,f :CtrlP<CR>
+map <leader>f :CtrlP<CR>
 
 " ag.vim
 nnoremap <leader>a :Ag! 
 
-" mru
-map ,o :MRU<CR>#
+" BufExplorer
+map <leader>b :BufExplorer<CR>
 
 " line numbers
 set number
@@ -83,8 +91,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-nnoremap ,- <c-w>s
-nnoremap ,\ <c-w>v
+nnoremap <leader>- <c-w>s
+nnoremap <leader>\ <c-w>v
 
 " Remap mark
 nnoremap ; `
@@ -94,7 +102,7 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " NERDTree
 " Ctrl-N : NERDTreeToggle
-map ,t :NERDTreeToggle<CR>
+map <leader>t :NERDTreeToggle<CR>
 
 " Lightline
 let g:lightline = {
