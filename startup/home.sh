@@ -1,4 +1,4 @@
-~/dotfiles/xrandr/aspiree1_samsung_left.sh
+~/dotfiles/xrandr/x450ldv_spectrum_right.sh
 feh --bg-fill ~/assets/background.png
 syndaemon -i 1 -d -t -k
 synclient VertScrollDelta=-67

@@ -32,6 +32,7 @@ alias chrome="google-chrome"
 alias mux="tmuxinator"
 alias bgreset="feh --bg-fill ~/assets/background.png"
 alias bgset="feh --bg-fill"
+alias comptonb="compton -b --config ~/dotfiles/compton.conf"
 
 # Tmux
 alias tmuxl="tmux ls"
@@ -64,3 +65,4 @@ alias rvm_ind="rvm ruby-2.1.5@indinero"
 
 # Startup
 alias startup_ind="~/dotfiles/startup/indinero.sh"
+alias startup_home="~/dotfiles/startup/home.sh"
