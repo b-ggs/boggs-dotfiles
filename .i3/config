@@ -190,7 +190,7 @@ exec synclient VertScrollDelta=-67
 exec synclient HorizScrollDelta=-67
 exec synclient VertEdgeScroll=0
 exec synclient AccelFactor=0.0754717
-exec compton -b --config ~/dotfiles/compton.conf
+# exec compton -b --config ~/dotfiles/compton.conf
 # Default for X450LDV = 0.0591541
 
 # Acer Aspire E1
