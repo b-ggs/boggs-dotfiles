@@ -56,6 +56,7 @@ alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-
 alias x450ldv_externalspectrum="~/dotfiles/xrandr/x450ldv_spectrum_right.sh"
 alias aspiree1_externalsamsung="~/dotfiles/xrandr/aspiree1_samsung_left.sh"
 alias x450ldv_externalsamsung="~/dotfiles/xrandr/x450ldv_samsung_left.sh"
+alias screenoff="xset dpms force off"
 
 # Synaptics
 alias synaptics_natural="synclient VertScrollDelta=-67 && synclient HorizScrollDelta=-67"
