@@ -66,3 +66,7 @@ alias rvm_ind="rvm ruby-2.1.5@indinero"
 # Startup
 alias startup_ind="~/dotfiles/startup/indinero.sh"
 alias startup_home="~/dotfiles/startup/home.sh"
+
+# SSH
+alias ssh_koding="ssh b-ggs@ubkk8848cd5a.b-ggs.koding.io"
+alias ssh_koding_tunnel="ssh b-ggs@ubkk8848cd5a.b-ggs.koding.io"
