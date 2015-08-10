@@ -120,11 +120,17 @@ endfunction
   
 set noshowmode
 
-" Startify stuff
-" Let ctrlp.vim replace startify buffer
-let g:ctrlp_reuse_window  = 'startify'
+" Startify
+let g:startify_custom_header = [
+      \'   ┌─┐┌┐     ┌─┐┌─┐┌─┐ ',
+      \'   │└┘├┴┐    │ ┬│ ┬└─┐ ',
+      \'   └──└─┘────└─┘└─┘└─┘ ',
+  		\'',
+  		\ ]
+let g:startify_change_to_dir = 0
+let g:startify_change_to_vcs_root = 1
 
-" Ctrlp optimization
+" Ctrlp
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore .svn
@@ -132,14 +138,8 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'"
+let g:ctrlp_reuse_window  = 'startify'
 
-" Set Startify header
-let g:startify_custom_header = [
-      \'   ┌─┐┌┐     ┌─┐┌─┐┌─┐ ',
-      \'   │└┘├┴┐    │ ┬│ ┬└─┐ ',
-      \'   └──└─┘────└─┘└─┘└─┘ ',
-  		\'',
-  		\ ]
 
 let g:ag_working_path_mode="r"
 
