@@ -7,6 +7,7 @@ syntax enable
 filetype plugin indent on
 set nocompatible
 set ruler
+set noswapfile
 
 " Unity.vim
 " nnoremap ,f :Unite file_rec/async<CR>
