@@ -1,4 +1,4 @@
-~/dotfiles/xrandr/x450ldv_spectrum_right.sh
+~/dotfiles/xrandr/x450ldv_spectrum_right_vga.sh
 feh --bg-fill ~/assets/background.png
 syndaemon -i 1 -d -t -k
 synclient VertScrollDelta=-67

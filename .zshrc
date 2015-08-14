@@ -51,7 +51,7 @@ alias datadrivethunar="cd /media/boggs/Data"
 alias vimbundle="cd ~/.vim/bundle"
 
 # Displays
-alias x450ldv_disconnect="xrandr --output HDMI1 --off"
+alias x450ldv_disconnect="xrandr --output HDMI1 --off --output DP1 --off"
 alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-as eDP1"
 alias x450ldv_externalspectrum="~/dotfiles/xrandr/x450ldv_spectrum_right.sh"
 alias aspiree1_externalsamsung="~/dotfiles/xrandr/aspiree1_samsung_left.sh"
@@ -59,14 +59,15 @@ alias x450ldv_externalsamsung="~/dotfiles/xrandr/x450ldv_samsung_left.sh"
 alias screenoff="xset dpms force off"
 
 # Synaptics
-alias synaptics_natural="synclient VertScrollDelta=-67 && synclient HorizScrollDelta=-67"
+alias synaptics_natural="synclient VertScrollDelta=-67 && synclient HorizScrollDelta=-67 && synclient AccelFactor=0.0754717"
 
 # RVM
 alias rvm_ind="rvm ruby-2.1.5@indinero"
 
 # Startup
 alias startup_ind="~/dotfiles/startup/indinero.sh"
-alias startup_home="~/dotfiles/startup/home.sh"
+alias startup_home_hdmi="~/dotfiles/startup/home_hdmi.sh"
+alias startup_home_vga="~/dotfiles/startup/home_vga.sh"
 
 # SSH
 alias ssh_koding="ssh b-ggs@ubkk8848cd5a.b-ggs.koding.io"
