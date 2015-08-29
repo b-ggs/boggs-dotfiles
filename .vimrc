@@ -104,6 +104,7 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " NERDTree
 " Ctrl-N : NERDTreeToggle
 map <leader>t :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen = 1
 
 " Lightline
 let g:lightline = {
