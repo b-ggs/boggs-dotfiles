@@ -37,9 +37,6 @@
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
-[submodule "i3-gaps"]
-	path = i3-gaps
-	url = git@github.com:Airblader/i3.git
 [submodule ".vim/bundle/unite.vim"]
 	path = .vim/bundle/unite.vim
 	url = git@github.com:Shougo/unite.vim.git
