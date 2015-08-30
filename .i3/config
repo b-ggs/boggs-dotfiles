@@ -16,7 +16,7 @@ for_window [class="Spotify"] move container to workspace 10 spotify
 # assign [class="Chromium"] 2 web
 # assign [class="Spotify"] 10 spotify
 
-font pango: Meslo LG S DZ for Powerline 6
+font pango: Meslo LG S DZ for Powerline 8
 
 floating_modifier $mod
 

@@ -8,6 +8,7 @@ filetype plugin indent on
 set nocompatible
 set ruler
 set noswapfile
+set backspace=indent,eol,start "src http://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
 
 " Unity.vim
 " nnoremap ,f :Unite file_rec/async<CR>
