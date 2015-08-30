@@ -1,7 +1,7 @@
 # Packages 
 ## Via apt-get
 ```
-apt-get git zsh tig vim vim-gui-common curl tmux screenfetch i3blocks lxappearance thunar feh silversearcher-ag ranger arandr libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev automake libevent-dev ncurses-dev conky dmenu
+sudo apt-get install git zsh tig vim vim-gui-common curl tmux screenfetch i3blocks lxappearance thunar feh silversearcher-ag ranger arandr libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev automake libevent-dev ncurses-dev conky dmenu
 ```
 
 ## Via deb
@@ -18,8 +18,15 @@ tmuxinator
 ## External packages
 ### Numix
 ```
-apt-add-repository ppa:numix/ppa
-apt-get numix-gtk-theme numix-icon-theme numix-icon-theme-circle
+sudo apt-add-repository ppa:numix/ppa
+sudo apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
+```
+
+### Arc
+```
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
+sudo apt-get update
+sudo apt-get install arc-theme
 ```
 
 ### Spotify
@@ -60,6 +67,6 @@ To fix issues present when I last installed Debian Jessie.
 ### No audio
 Install kernel >4.1.*. See 'Touchpad not recognized' above.
 ### No Wi-Fi
-`apt-get firmware-ralink`
+`apt-get install firmware-ralink`
 ### Partition mounting permissions
 Edit `/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy`, then set mount permissions to yes for any user.
