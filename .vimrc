@@ -18,7 +18,7 @@ set noswapfile
 " omap ; <Plug>(easymotion-tn)
 
 " highlight kill
-nnoremap <silent> <esc> :noh<CR><esc>
+" nnoremap <silent> <esc> :noh<CR><esc>
 
 " Remap leader
 let mapleader = "\<Space>"
