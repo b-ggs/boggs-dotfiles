@@ -30,7 +30,7 @@ sudo apt-get install arc-theme
 ```
 
 ### Spotify
-Taken from: https://www.spotify.com/ph/download/linux/
+[source](https://www.spotify.com/ph/download/linux/)
 ```
 # 1. Add the Spotify repository signing key to be able to verify downloaded packages
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
@@ -47,7 +47,7 @@ sudo apt-get install spotify-client
 
 # ASUS X450LDV issues
 ## Touchpad not recognized
-Install kernel >4.0. (Taken from: http://www.yourownlinux.com/2015/07/how-to-install-linux-kernel-4-1-3-in-linux.html)
+Install kernel >4.0. [source](http://www.yourownlinux.com/2015/07/how-to-install-linux-kernel-4-1-3-in-linux.html)
 ```
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.1.3-unstable/linux-headers-4.1.3-040103_4.1.3-040103.201507220129_all.deb
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.1.3-unstable/linux-headers-4.1.3-040103-generic_4.1.3-040103.201507220129_amd64.deb
@@ -61,6 +61,40 @@ Edit /etc/default/grub:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_osi="
 ```
 Run `sudo update-grub`.
+
+## Permanently disable NVIDIA card
+The NVIDIA card is a pretty big battery hog, and I do all my graphics-intensive activities on Windows anyway, so... [source](http://blog.10ne.org/2014/01/23/disable-the-optimus-discrete-graphics-gpu-in-ubuntu-using-bbswitch/)
+```
+sudo apt-add-repository "deb http://ppa.launchpad.net/bumblebee/stable/ubuntu YOUR_UBUNTU_VERSION_HERE main"
+sudo apt-add-repository "deb-src http://ppa.launchpad.net/bumblebee/stable/ubuntu YOUR_UBUNTU_VERSION_HERE main"
+sudo apt-get update
+sudo apt-get install bbswitch-dkms
+```
+
+Append to /etc/modeprobe.d/blacklist.conf:
+```
+# Blacklist the alternative nvidia module
+blacklist nouveau
+
+# Blacklist the original nvidia module
+blacklist nvidia
+```
+
+Append to /etc/modules:
+```
+# Switch off discrete GPU
+bbswitch load_state=0
+```
+
+Apply changes.
+```
+sudo update-initramfs -u
+```
+
+Check the NVIDIA card's status.
+```
+cat /proc/acpi/bbswitch
+```
 
 ## Debian-specific issues
 To fix issues present when I last installed Debian Jessie.
