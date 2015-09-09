@@ -3,7 +3,9 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files=".zshrc .vimrc .vim .tmuxinator .tmux.conf .fonts .oh-my-zsh .tmux-powerlinerc .i3 styleguide .Xdefaults .i3blocks.conf i3blocks .xcolors .dircolors assets .oh-my-fish"        # list of files/folders to symlink in homedir
+
+# list of files/folders to symlink in homedir
+files=".zshrc .vimrc .vim .tmuxinator .tmux.conf .fonts .oh-my-zsh .i3 .i3blocks.conf i3blocks .xcolors .dircolors assets"
 
 ##########
 

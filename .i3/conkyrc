@@ -28,7 +28,15 @@ TEXT
 
 #wlan0 interface
   {
-    "full_text": " wi-fi [${exec ~/i3blocks/wlan}]",
+    "full_text": " wlan0 [${exec ~/i3blocks/wlan}]",
+    "color":"\#f0c674",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#usb0 interface
+  {
+    "full_text": " usb0 [${exec ~/i3blocks/usb}]",
     "color":"\#f0c674",
     "separator_block_width": 0,
     "separator": false
@@ -36,8 +44,8 @@ TEXT
 
 #eth0 interface
   {
-    "full_text": " ethernet [${exec ~/i3blocks/network}]",
-    "color":"\#81a2be",
+    "full_text": " eth0 [${exec ~/i3blocks/network}]",
+    "color":"\#f0c674",
     "separator_block_width": 0,
     "separator": false
   },
@@ -45,7 +53,7 @@ TEXT
 #Finds current volume. May need modified depending on your setup
   {
     "full_text": " volume ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1}",
-    "color":"\#b294bb",
+    "color":"\#81a2be",
     "separator_block_width": 0,
     "separator": false
   },
@@ -68,7 +76,7 @@ TEXT
 
 #Shows time
   {
-    "full_text": " [${time %a %d %b} ${time %H:%M:%S}]",
+    "full_text": " time [${time %a %d %b} ${time %H:%M:%S}]",
     "color": "\#c5c8c6",
     "separator_block_width": 0,
     "separator": false

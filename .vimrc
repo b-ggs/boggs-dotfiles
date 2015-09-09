@@ -99,6 +99,9 @@ nnoremap <leader>\ <c-w>v
 " Remap mark
 nnoremap ; `
 
+" Map noh
+" noremap <silent> <c-l> :noh<cr><c-l>
+
 " Buffer number next to filename
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
