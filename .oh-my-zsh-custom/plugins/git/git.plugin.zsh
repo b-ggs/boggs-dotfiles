@@ -108,6 +108,10 @@ ggp() {
 [[ "$#" != 1 ]] && b="$(current_branch)"
 git push origin "${b:=$1}"
 }
+ggpf() {
+[[ "$#" != 1 ]] && b="$(current_branch)"
+git push origin "${b:=$1}" -f
+}
 compdef _git ggp=git-checkout
 ggpnp() {
 ggl "$1" && ggp "$1"

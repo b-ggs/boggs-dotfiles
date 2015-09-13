@@ -1,2 +1,2 @@
-rm -rf ~/.oh-my-zsh/custom/*
-cp -r ~/.oh-my-zsh-custom/* ~/.oh-my-zsh/custom
+rm -rf ~/dotfiles/.oh-my-zsh/custom/*
+cp -r ~/dotfiles/.oh-my-zsh-custom/* ~/.oh-my-zsh/custom
