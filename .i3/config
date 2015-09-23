@@ -190,6 +190,8 @@ exec synclient VertScrollDelta=-67
 exec synclient HorizScrollDelta=-67
 exec synclient VertEdgeScroll=0
 exec synclient AccelFactor=0.0754717
+exec udisks --mount /dev/sda4
+exec udisks --mount /dev/sda6
 # exec compton -b --config ~/dotfiles/compton.conf
 # Default for X450LDV = 0.0591541
 

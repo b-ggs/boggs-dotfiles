@@ -26,6 +26,7 @@ alias chrome="google-chrome"
 alias mux="tmuxinator"
 alias bgreset="feh --bg-fill ~/assets/background.png"
 alias bgset="feh --bg-fill"
+alias mountparts="udisks --mount /dev/sda4 && udisks --mount /dev/sda6"
 # alias comptonb="compton -b --config ~/dotfiles/compton.conf"
 
 # Tmux
@@ -41,7 +42,6 @@ alias dev="cd ~/dev"
 alias swarm="cd ~/dev/swarm"
 # alias indvag="cd ~/dev/vagrant_indinero"
 alias datadrive="cd /media/Data"
-alias datadrivethunar="cd /media/boggs/Data"
 alias vimbundle="cd ~/.vim/bundle"
 
 # Displays
