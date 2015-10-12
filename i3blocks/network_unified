@@ -1,0 +1,51 @@
+#!/bin/sh
+
+# Copyright (C) 2014 Julien Bonjean <julien@bonjean.info>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+WIRELESS_DEFAULT="wlan0"
+USB_DEFAULT="usb0"
+
+INTERFACE="$(ip route | awk '/^default/ { print $5 ; exit }')"
+
+if [ "$INTERFACE" != "" ]; then
+  state="$(cat /sys/class/net/$INTERFACE/operstate)"
+fi
+
+if [ "$state" != "up" ]; then
+  if [ "$INTERFACE" != "$USB_DEFAULT" ]; then
+    # echo "down"
+    echo "net [down"
+    # echo "#a54242"
+    exit 0
+  fi
+fi
+
+ssid="$(iwgetid $INTERFACE -r)"
+
+ipaddr="$(ip addr show $INTERFACE | perl -n -e'/inet (.+)\// && print $1')"
+ipaddr="${ipaddr:-0.0.0.0}"
+
+# full text
+if [ "$INTERFACE" != "$WIRELESS_DEFAULT" ]; then
+  echo "$INTERFACE [$ipaddr"
+	exit 0
+fi
+
+echo "$INTERFACE [$ssid $ipaddr"
+# [ -n "$speed" ] && echo " ($speed Mbits/s)" || echo
+
+# short text
+# echo "$ipaddr"

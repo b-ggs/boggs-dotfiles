@@ -39,9 +39,9 @@ $full_text = "";
 if ($status eq 'Discharging' && $percent == 100 || $status eq 'Full' || !( $acpi =~ /(\d\d:\d\d):/) ) {
   $full_text .= 'full ';
 } elsif ($status eq 'Discharging') {
-	$full_text .= 'discharging ';
+	$full_text .= 'dis ';
 } elsif ($status eq 'Charging') {
-	$full_text .= 'charging ';
+	$full_text .= 'chg ';
 }
 
 $full_text .= "[$percent%";

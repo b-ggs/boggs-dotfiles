@@ -26,25 +26,9 @@ TEXT
     "separator": false
   },
 
-#wlan0 interface
+#network test
   {
-    "full_text": " wlan0 [${exec ~/i3blocks/wlan}]",
-    "color":"\#f0c674",
-    "separator_block_width": 0,
-    "separator": false
-  },
-
-#usb0 interface
-  {
-    "full_text": " usb0 [${exec ~/i3blocks/usb}]",
-    "color":"\#f0c674",
-    "separator_block_width": 0,
-    "separator": false
-  },
-
-#eth0 interface
-  {
-    "full_text": " eth0 [${exec ~/i3blocks/network}]",
+    "full_text": " ${exec ~/i3blocks/network_unified}${exec ~/i3blocks/network_monitor}]",
     "color":"\#f0c674",
     "separator_block_width": 0,
     "separator": false
@@ -52,7 +36,7 @@ TEXT
 
 #Finds current volume. May need modified depending on your setup
   {
-    "full_text": " volume ${exec amixer -D pulse get Master | grep -o "\[.*%\]" -m 1}",
+    "full_text": " vol [${exec ~/i3blocks/volume}]",
     "color":"\#81a2be",
     "separator_block_width": 0,
     "separator": false
@@ -60,7 +44,7 @@ TEXT
 
 #Shows current brightness 
   {
-    "full_text": " brightness [${exec ~/i3blocks/brightness}]",
+    "full_text": " brg [${exec ~/i3blocks/brightness}]",
     "color":"\#b294bb",
     "separator_block_width": 0,
     "separator": false

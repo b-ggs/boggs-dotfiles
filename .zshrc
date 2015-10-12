@@ -7,27 +7,28 @@ Plugins=(git)
 
 source ~/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/rubies/ruby-2.1.5/bin/ruby" # Add RVM to PATH for scripting
-export TERM="xterm-256color" #256 colors in gnome-terminal
+export TERM="xterm-256color" # 256 colors in gnome-terminal
 
 source $ZSH/oh-my-zsh.sh
 
 d=~/.dircolors
 test -r $d && eval "$(dircolors $d)"
 
+# System
+alias svol="amixer -D pulse sset Master "
+alias svolm="pactl set-sink-volume 1 "
+alias mntall="udisks --mount /dev/sda4 && udisks --mount /dev/sda6"
+alias synconfig="~/dotfiles/scripts/synconfig.sh"
+
 # Commands
-alias mountdata="udisks --mount /dev/sda5"
-alias unmountdata="udisks --unmount /dev/sda5"
-alias setvolume="amixer -D pulse sset Master "
-alias setvolumemax="pactl set-sink-volume 1 "
-alias setvolume150="pactl set-sink-volume 1 150%"
 alias findgrep="find . | grep"
+alias hisgrep="history | grep"
 alias findag="find . | ag"
 alias chrome="google-chrome"
 alias mux="tmuxinator"
-alias bgreset="feh --bg-fill ~/assets/background.png"
+alias bgreset="~/dotfiles/scripts/background.sh"
 alias bgset="feh --bg-fill"
-alias mountparts="udisks --mount /dev/sda4 && udisks --mount /dev/sda6"
-# alias comptonb="compton -b --config ~/dotfiles/compton.conf"
+alias intellijrescue="killall -9 ibus-x11"
 
 # Tmux
 alias tmuxl="tmux ls"
@@ -38,31 +39,12 @@ alias tmuxk="tmux kill-session -t"
 alias home="cd ~"
 alias dotfiles="cd ~/dotfiles"
 alias dev="cd ~/dev"
-# alias ind="cd ~/dev/indinero"
-alias swarm="cd ~/dev/swarm"
-# alias indvag="cd ~/dev/vagrant_indinero"
-alias datadrive="cd /media/Data"
-alias vimbundle="cd ~/.vim/bundle"
+alias vimb="cd ~/.vim/bundle"
 
 # Displays
-alias x450ldv_disconnect="xrandr --output HDMI1 --off --output DP1 --off"
-alias x450ldv_externalmirrorhdmi1="xrandr --output HDMI1 --mode 1024x768 --same-as eDP1"
-alias x450ldv_externalspectrum="~/dotfiles/xrandr/x450ldv_spectrum_right.sh"
-# alias aspiree1_externalsamsung="~/dotfiles/xrandr/aspiree1_samsung_left.sh"
-alias x450ldv_externalsamsung="~/dotfiles/xrandr/x450ldv_samsung_left.sh"
-alias screenoff="xset dpms force off"
-
-# Synaptics
-alias synaptics_natural="synclient VertScrollDelta=-67 && synclient HorizScrollDelta=-67 && synclient AccelFactor=0.0754717"
-
-# RVM
-alias rvm_ind="rvm ruby-2.1.5@indinero"
+alias extdis="xrandr --output HDMI1 --off --output DP1 --off"
+alias extspec="~/dotfiles/xrandr/x450ldv_spectrum_right.sh"
+alias soff="xset dpms force off"
 
 # Startup
-alias startup_ind="~/dotfiles/startup/indinero.sh"
-alias startup_home_hdmi="~/dotfiles/startup/home_hdmi.sh"
-alias startup_home_vga="~/dotfiles/startup/home_vga.sh"
-
-# SSH
-alias ssh_koding="ssh b-ggs@ubkk8848cd5a.b-ggs.koding.io"
-alias ssh_koding_tunnel="ssh b-ggs@ubkk8848cd5a.b-ggs.koding.io"
+alias sup="~/dotfiles/startup/home_vga.sh"
