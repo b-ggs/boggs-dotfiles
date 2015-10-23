@@ -34,6 +34,7 @@ alias intellijrescue="killall -9 ibus-x11"
 alias tmuxl="tmux ls"
 alias tmuxa="tmux attach-session -t"
 alias tmuxk="tmux kill-session -t"
+alias tmuxd="tmux detach"
 
 # Directories
 alias home="cd ~"
@@ -44,7 +45,16 @@ alias vimb="cd ~/.vim/bundle"
 # Displays
 alias extdis="xrandr --output HDMI1 --off --output DP1 --off"
 alias extspec="~/dotfiles/xrandr/x450ldv_spectrum_right.sh"
+alias extmirror="xrandr --output DP1 --same-as eDP1 --mode 1024x768"
 alias soff="xset dpms force off"
 
 # Startup
 alias sup="~/dotfiles/startup/home_vga.sh"
+
+# Programs
+alias matlab2015exec="/usr/local/MATLAB/R2015b/bin/matlab"
+alias matlab2009exec="~/MATHWORKS_R2009B/bin/matlab"
+
+# Clipboard
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"

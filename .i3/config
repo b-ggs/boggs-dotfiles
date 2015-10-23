@@ -9,17 +9,14 @@ gaps inner 10
 # gaps outer 5
 
 # Workspace assignment
-# for_window [class="chrome"] move container to workspace 2 web
-# for_window [class="Chromium"] move container to workspace 2 web
+for_window [class=".*Android Studio.*"] move container to workspace 3 dev
+for_window [class=".*IDEA.*"] move container to workspace 3 dev
+for_window [class=".*MATLAB.*"] move container to workspace 3 dev
+for_window [class=".*MATLAB.*"] move container to workspace 3 dev
+for_window [class=".*Atom.*"] move container to workspace 4 notes
+for_window [class=".*VirtualBox.*"] move container to workspace 8 vbox
+for_window [class=".*Transmission.*"] move container to workspace 9 tx
 for_window [class="Spotify"] move container to workspace 10 spotify
-for_window [title="Oracle VM VirtualBox Manager"] move container to workspace 8 vbox
-for_window [title=".*Oracle VM VirtualBox"] move container to workspace 8 vbox
-for_window [title=".*Transmission.*"] move container to workspace 9 tx
-for_window [title=".*Android Studio.*"] move container to workspace 3 dev
-for_window [title=".*IDEA.*"] move container to workspace 3 dev
-# assign [class="chrome"] 2 web
-# assign [class="Chromium"] 2 web
-# assign [class="Spotify"] 10 spotify
 
 font pango: Meslo LG S DZ for Powerline 8
 
@@ -88,7 +85,7 @@ bindsym $mod+a focus parent
 bindsym $mod+1 workspace 1 term
 bindsym $mod+2 workspace 2 web
 bindsym $mod+3 workspace 3 dev
-bindsym $mod+4 workspace 4 misc
+bindsym $mod+4 workspace 4 notes
 bindsym $mod+5 workspace 5 misc
 bindsym $mod+6 workspace 6 misc
 bindsym $mod+7 workspace 7 misc
@@ -100,7 +97,7 @@ bindsym $mod+0 workspace 10 spotify
 bindsym $mod+Shift+1 move container to workspace 1 term
 bindsym $mod+Shift+2 move container to workspace 2 web
 bindsym $mod+Shift+3 move container to workspace 3 dev
-bindsym $mod+Shift+4 move container to workspace 4 misc
+bindsym $mod+Shift+4 move container to workspace 4 notes
 bindsym $mod+Shift+5 move container to workspace 5 misc
 bindsym $mod+Shift+6 move container to workspace 6 misc
 bindsym $mod+Shift+7 move container to workspace 7 misc

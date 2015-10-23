@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/vim-hyperstyle"]
 	path = .vim/bundle/vim-hyperstyle
 	url = git@github.com:rstacruz/vim-hyperstyle.git
+[submodule ".vim/bundle/gist-vim"]
+	path = .vim/bundle/gist-vim
+	url = git@github.com:mattn/gist-vim.git
