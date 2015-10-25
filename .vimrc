@@ -11,31 +11,16 @@ set noswapfile
 set autoindent 
 set backspace=indent,eol,start "src http://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
 
-" Unity.vim
-" nnoremap ,f :Unite file_rec/async<CR>
-
-" EasyMotion.vim
-" Gif config
-" map  ; <Plug>(easymotion-sn)
-" omap ; <Plug>(easymotion-tn)
-
-" highlight kill
-" nnoremap <silent> <esc> :noh<CR><esc>
-
 " Remap leader
 let mapleader = "\<Space>"
-
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
-" map  n <Plug>(easymotion-next)
-" map  N <Plug>(easymotion-prev)
 
 " Easymotion 
 map <leader>l <Plug>(easymotion-lineforward)
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 map <leader>h <Plug>(easymotion-linebackward)
+" map  n <Plug>(easymotion-next)
+" map  N <Plug>(easymotion-prev)
 
 " Disable annoying bells.
 set noerrorbells
@@ -85,6 +70,7 @@ set expandtab
 
 " case insensitive search
 set ignorecase
+
 " search becomes case sensitive if caps used
 set smartcase
 
@@ -93,21 +79,16 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
-
 nnoremap <leader>- <c-w>s
 nnoremap <leader>\ <c-w>v
 
 " Remap mark
 nnoremap ; `
 
-" Map noh
-" noremap <silent> <c-l> :noh<cr><c-l>
-
 " Buffer number next to filename
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " NERDTree
-" Ctrl-N : NERDTreeToggle
 map <leader>t :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
@@ -121,6 +102,7 @@ let g:lightline = {
   " \ 'separator': { 'left': '', 'right': '' },
   " \ 'subseparator': { 'left': '', 'right': '' }
 
+" Show path on Lightline
 function! LightLineFilename()
   return expand('%')
 endfunction     
@@ -147,7 +129,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'"
 let g:ctrlp_reuse_window  = 'startify'
 
-
+" Ag path
 let g:ag_working_path_mode="r"
 
 " Color override
