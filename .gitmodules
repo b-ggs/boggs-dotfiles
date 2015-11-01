@@ -1,69 +1,9 @@
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-startify"]
-	path = .vim/bundle/vim-startify
-	url = git@github.com:mhinz/vim-startify.git
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
-	url = git@github.com:tpope/vim-pathogen.git
-[submodule ".vim/bundle/mru"]
-	path = .vim/bundle/mru
-	url = git@github.com:yegappan/mru.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = git@github.com:erikw/tmux-powerline.git
-[submodule ".vim/bundle/YankRing.vim"]
-	path = .vim/bundle/YankRing.vim
-	url = git@github.com:vim-scripts/YankRing.vim.git
-[submodule ".vim/bundle/lightline.vim"]
-	path = .vim/bundle/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
-[submodule ".vim/bundle/vim-jst"]
-	path = .vim/bundle/vim-jst
-	url = git@github.com:briancollins/vim-jst.git
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = git@github.com:kchmck/vim-coffee-script.git
-[submodule ".vim/bundle/unite.vim"]
-	path = .vim/bundle/unite.vim
-	url = git@github.com:Shougo/unite.vim.git
-[submodule ".vim/bundle/vimproc.vim"]
-	path = .vim/bundle/vimproc.vim
-	url = git@github.com:Shougo/vimproc.vim.git
-[submodule ".vim/bundle/vim-easymotion"]
-	path = .vim/bundle/vim-easymotion
-	url = git@github.com:easymotion/vim-easymotion.git
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
-[submodule ".vim/bundle/tcomment_vim"]
-	path = .vim/bundle/tcomment_vim
-	url = git@github.com:tomtom/tcomment_vim.git
-[submodule ".vim/bundle/bufexplorer"]
-	path = .vim/bundle/bufexplorer
-	url = git@github.com:jlanzarotta/bufexplorer.git
-[submodule ".vim/bundle/ag.vim"]
-	path = .vim/bundle/ag.vim
-	url = git@github.com:rking/ag.vim.git
-[submodule ".vim/bundle/vim-closer"]
-	path = .vim/bundle/vim-closer
-	url = git@github.com:rstacruz/vim-closer.git
-[submodule ".vim/bundle/vim-hyperstyle"]
-	path = .vim/bundle/vim-hyperstyle
-	url = git@github.com:rstacruz/vim-hyperstyle.git
-[submodule ".vim/bundle/gist-vim"]
-	path = .vim/bundle/gist-vim
-	url = git@github.com:mattn/gist-vim.git
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git

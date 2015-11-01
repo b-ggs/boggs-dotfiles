@@ -1,6 +1,31 @@
-" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+" Vundle
+filetype off
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+
+" Vundle packages
+Bundle 'gmarik/vundle'
+Bundle 'eparreno/vim-l9'
+Bundle 'vim-scripts/YankRing'
+Bundle 'rking/ag.vim'
+Bundle 'jlanzarotta/bufexplorer'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/gist-vim'
+Bundle 'itchyny/lightline.vim'
+Bundle 'yegappan/mru'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'rstacruz/vim-closer'
+Bundle 'rchmck/vim-coffee-script'
+Bundle 'easymotion/vim-easymotion'
+Bundle 'tpope/vim-fugitive'
+Bundle 'rstacruz/vim-hyperstyle'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
+Bundle 'tpope/vim-pathogen'
+Bundle 'mhinz/vim-startify'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'mattn/webapi-vim'
 
 " General settings
 syntax enable
