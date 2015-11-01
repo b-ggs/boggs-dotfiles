@@ -7,6 +7,7 @@ Plugins=(git)
 
 source ~/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/rubies/ruby-2.1.5/bin/ruby" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/exec"
 export TERM="xterm-256color" # 256 colors in gnome-terminal
 
 source $ZSH/oh-my-zsh.sh
