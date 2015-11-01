@@ -5,8 +5,7 @@ call vundle#rc()
 
 " Vundle packages
 Bundle 'gmarik/vundle'
-Bundle 'eparreno/vim-l9'
-Bundle 'vim-scripts/YankRing'
+Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rking/ag.vim'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'kien/ctrlp.vim'
@@ -15,17 +14,23 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'yegappan/mru'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'rstacruz/vim-closer'
-Bundle 'rchmck/vim-coffee-script'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
-Bundle 'rstacruz/vim-hyperstyle'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'tpope/vim-pathogen'
-Bundle 'mhinz/vim-startify'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'mattn/webapi-vim'
+
+Bundle 'b-ggs/vim-l9'
+" Bundle 'eparreno/vim-l9'
+Bundle 'b-ggs/vim-closer'
+" Bundle 'rstacruz/vim-closer'
+Bundle 'b-ggs/vim-hyperstyle'
+" Bundle 'rstacruz/vim-hyperstyle'
+Bundle 'b-ggs/vim-startify'
+" Bundle 'mhinz/vim-startify'
 
 " General settings
 syntax enable
