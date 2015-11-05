@@ -10,7 +10,7 @@ gaps inner 10
 
 # Workspace assignment
 for_window [class=".*Android Studio.*"] move container to workspace 3 dev
-for_window [class=".*IDEA.*"] move container to workspace 3 dev
+for_window [class=".*IntelliJ.*"] move container to workspace 3 dev
 for_window [class=".*MATLAB.*"] move container to workspace 3 dev
 for_window [class=".*MATLAB.*"] move container to workspace 3 dev
 for_window [class=".*Atom.*"] move container to workspace 4 notes
