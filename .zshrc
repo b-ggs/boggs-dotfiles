@@ -1,5 +1,5 @@
 export ZSH=~/.oh-my-zsh
-ZSH_THEME="eastwood"
+ZSH_THEME="gnzh"
 DISABLE_AUTO_TITLE="true"
 plugins=(git)
 
@@ -59,3 +59,6 @@ alias matlab2009exec="~/MATHWORKS_R2009B/bin/matlab"
 # Clipboard
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
+
+# New aliases
+alias vi="vim"

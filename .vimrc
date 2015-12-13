@@ -164,3 +164,6 @@ highlight LineNr ctermfg=1
 highlight Visual cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
 highlight Search cterm=NONE ctermbg=3 ctermfg=Black guibg=Gray
 highlight VertSplit ctermbg=236 ctermfg=236
+
+" Persistent clipboard
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
