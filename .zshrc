@@ -2,11 +2,11 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="gnzh"
 DISABLE_AUTO_TITLE="true"
 plugins=(git)
-
 Plugins=(git)
 
-source ~/.rvm/scripts/rvm
-export PATH="$PATH:$HOME/.rvm/rubies/ruby-2.1.5/bin/ruby" # Add RVM to PATH for scripting
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 export PATH="$PATH:$HOME/exec"
 export TERM="xterm-256color" # 256 colors in gnome-terminal
 
